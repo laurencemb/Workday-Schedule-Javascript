@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+   <!--  <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    /> -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <title>Work Day Scheduler  </title>
+
+    <script src="https://kit.fontawesome.com/cc4f85a982.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+    </header>
+    <div id="timeBlockContainer" class="container">
+      <!-- Timeblocks go here -->
+
+      <section class="col-1 col-10 col 1">
+        <div class="table-responsive">
+          <table class="table table-bordered custom-table">
+            <thead>
+              <tr>
+                <th class="hours" scope="col">Hour</th>
+                <th class="tasks" scope="col">Tasks/Meetings</th>
+                <th class="sumbit" scope="col">Submit</th>
+              </tr>
+            </thead>
+            <tbody id="project-display"></tbody>
+            <!-- 9am time slot -->
+            <tr class="timeSlot" id="9">
+            <td ><p class="hourInd">9:00am</p></td>
+            <td class="form"> <div class="taskInput"> <input type ='text' id="task1" name="dailytask1"/> </div></td>
+            <td> <button type="submit" class="btn submitBtn" ><i class="fa-solid fa-floppy-disk"></i></button></td>
+            </tr>
+           <!-- 10am time slot -->
+           <tr class="timeSlot" id="10">
+            <td ><p class="hourInd">10:00am</p></td>
+            <td class="form"> <div class="taskInput"> <input type ='text' id="task2" name="dailytask2"/> </div></td>
+            <td> <button type="submit" class="btn submitBtn" ><i class="fa-solid fa-floppy-disk"></i></button></td>
+           </tr>
+             <!-- 11am time slot -->
+             <tr class="timeSlot" id="11">
+              <td ><p class="hourInd">11:00am</p></td>
+              <td class="form"> <div class="taskInput"> <input type ='text' id="task3" name="dailytask2"/> </div></td>
+              <td> <button type="submit" class="btn submitBtn" ><i class="fa-solid fa-floppy-disk"></i></button></td>
+             </tr>
+               <!-- 12pm time slot -->
+           <tr class="timeSlot" id="12">
+            <td ><p class="hourInd">12:00pm</p></td>
+            <td class="form"> <div class="taskInput"> <input type ='text' id="task4" name="dailytask2"/> </div></td>
+            <td> <button type="submit" class="btn submitBtn" ><i class="fa-solid fa-floppy-disk"></i></button></td>
+           </tr>
+               <!-- 1pm time slot -->
+               <tr class="timeSlot" id="13">
+                <td ><p class="hourInd">1:00pm</p></td>
+                <td class="form"> <div class="taskInput"> <input type ='text' id="task5" name="dailytask2"/> </div></td>
+                <td> <button type="submit" class="btn submitBtn" ><i class="fa-solid fa-floppy-disk"></i></button></td>
+               </tr>
+                   <!-- 2pm time slot -->
+           <tr class="timeSlot" id="14">
+            <td ><p class="hourInd">2:00pm</p></td>
+            <td class="form"> <div class="taskInput"> <input type ='text' id="task6" name="dailytask2"/> </div></td>
+            <td> <button type="submit" class="btn submitBtn" ><i class="fa-solid fa-floppy-disk"></i></button></td>
+           </tr>
+               <!-- 3pm time slot -->
+               <tr class="timeSlot" id="15">
+                <td ><p class="hourInd">3:00pm</p></td>
+                <td class="form"> <div class="taskInput"> <input type ='text' id="task7" name="dailytask2"/> </div></td>
+                <td> <button type="submit" class="btn submitBtn" ><i class="fa-solid fa-floppy-disk"></i></button></td>
+               </tr>
+                   <!-- 4pm time slot -->
+           <tr class="timeSlot" id="16">
+            <td ><p class="hourInd">4:00pm</p></td>
+            <td class="form"> <div class="taskInput"> <input type ='text' id="task8" name="dailytask2"/> </div></td>
+            <td> <button type="submit" class="btn submitBtn" ><i class="fa-solid fa-floppy-disk"></i></button></td>
+           </tr>
+               <!-- 5pm time slot -->
+               <tr class="timeSlot" id="17">
+                <td ><p class="hourInd">5:00pm</p></td>
+                <td class="form"> <div class="taskInput"> <input type ='text' id="task9" name="dailytask2"/> </div></td>
+                <td> <button type="submit" class="btn submitBtn" ><i class="fa-solid fa-floppy-disk"></i></button></td>
+               </tr>
+
+
+
+
+          </table>
+        </div>
+
+        <div class="buttondiv"> <button class="clrBtn id=clrBtn">Clear Form</button></div>
+
+      
+      </section>
+
+
+      
+      <!-- On tables -->
+
+<!-- <tr class="table-primary">Hour of Day</tr>
+<tr class="table-secondary">Events</tr>
+<tr class="table-success">Submit</tr>
+
+
+      <div>
+<table class="table-primary">9:00</table>
+<table class="table-secondary">10:00</table>
+<table class="table-success">11:00</table>
+<table class="table-danger">12:00</table>
+<table class="table-warning">13:00</table>
+<table class="table-info">14:00</table>
+<table class="table-light">15:00</table>
+<table class="table-dark">16:00</table>
+<table class="table-dark">17:00</table>
+      </div>
+
+<tr class="table-primary">...</tr>
+<tr class="table-secondary">...</tr>
+<tr class="table-success">...</tr>
+<tr class="table-danger">...</tr>
+<tr class="table-warning">...</tr>
+<tr class="table-info">...</tr>
+<tr class="table-light">...</tr>
+<tr class="table-dark">...</tr>
+
+
+<tr>
+  <td class="table-primary">...</td>
+  <td class="table-secondary">...</td>
+  <td class="table-success">...</td>
+  <td class="table-danger">...</td>
+  <td class="table-warning">...</td>
+  <td class="table-info">...</td>
+  <td class="table-light">...</td>
+  <td class="table-dark">...</td>
+</tr> -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="/logic.js"></script>
+  </body>
+</html>
