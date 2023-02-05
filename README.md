@@ -6,7 +6,7 @@ These tasks should persist if the user leaves or refreshes the page.
 
 Input your daily tasks to stay organised!
 
-Link to live site:
+Link to live site: https://laurencemb.github.io/Workday-Schedule-Javascript/
 
 Screen shot of deployed site: screenshot of deployed wepage:
 ![](assets/Capture.JPG))
